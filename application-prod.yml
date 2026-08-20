@@ -1,0 +1,12 @@
+# Production Environment Configuration
+spring:
+  ai:
+    vectorstore:
+      pgvector:
+        table-name: vector_store
+        dimension: 1536
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-3-small

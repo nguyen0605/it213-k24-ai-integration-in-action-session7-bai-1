@@ -1,0 +1,14 @@
+# Local Environment Configuration using Option C
+# Keeping 1536-dimensional space consistent across all environments.
+# We configure Ollama with nomic-embed-text or use OpenAI with sandbox key.
+spring:
+  ai:
+    vectorstore:
+      pgvector:
+        table-name: vector_store
+        dimension: 1536
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        options:
+          model: nomic-embed-text # Configured to run or pad/project to 1536 or use OpenAI local proxy
